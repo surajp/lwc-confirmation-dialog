@@ -9,7 +9,8 @@ Dialog to confirm user action before proceeding.
 ```
 
 ```js
-let result = await this.template.querySelector('c-confirmation-dialog').confirm('Do you wish to proceed?');
+let result = await this.template.querySelector('c-confirmation-dialog')
+                        .confirm('Do you wish to proceed?');
 if(result===true){
   //proceed
 }
