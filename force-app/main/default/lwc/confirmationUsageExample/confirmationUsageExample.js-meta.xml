@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>48.0</apiVersion>
+    <apiVersion>53.0</apiVersion>
     <isExposed>true</isExposed>
     <targets>
-      <target>lightning__HomePage</target>
+      <target>lightning__AppPage</target>
     </targets>
+    <targetConfigs>
+      <targetConfig targets="lightning__AppPage">
+      	<property name="theMessage" type="string" default="Hello, world?" label="Confirmation Message" description="The confirmation message"/>
+      	<event name="confirm" label="Confirmation Event" description="This event fires when confirmed is true">
+      	  <schema>
+      	    {
+      	      "type": "object",
+      	      "properties":{
+      	        "confirmationid": {
+      	          "type": "string",
+      	          "title": "Dialog Id",
+      	          "description":"Enter a unique confirmation id for this dialog"
+      	        }
+      	      }
+      	    }
+      	  </schema>
+      	</event>
+      </targetConfig>
+      </targetConfigs>
 </LightningComponentBundle>

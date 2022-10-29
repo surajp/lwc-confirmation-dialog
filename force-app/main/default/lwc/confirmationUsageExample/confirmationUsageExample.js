@@ -1,7 +1,10 @@
-import { LightningElement } from "lwc";
+import { LightningElement, api } from "lwc";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 export default class ConfirmationUsageExample extends LightningElement {
+  @api
+  theMessage = "";
+
   async handleClick(event) {
     event.preventDefault();
     const confirmation = this.template.querySelector("c-confirmation-dialog");
@@ -9,6 +12,7 @@ export default class ConfirmationUsageExample extends LightningElement {
     if (confirmResult === true) {
       //delete record
       this.dispatchEvent(new ShowToastEvent({ message: "Record has been deleted", variant: "success" }));
+      this.dispatchEvent(new CustomEvent("confirm"));
     }
   }
 }

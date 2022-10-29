@@ -1,18 +1,13 @@
 {
-  "orgName": "85suraj company",
+  "orgName": "PSB company",
   "edition": "Developer",
-  "features": [],
+  "features": ["PlatformCache"],
   "settings": {
     "lightningExperienceSettings": {
-        "enableS1DesktopEnabled": true
-    },
-    "securitySettings": {
-        "passwordPolicies": {
-            "enableSetPasswordInApi": true
-        }
+      "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
-        "enableS1EncryptedStoragePref2": false
+      "enableS1EncryptedStoragePref2": false
     }
   }
 }
